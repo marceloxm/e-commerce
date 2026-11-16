@@ -1,9 +1,33 @@
-# e-commerce
+# 🛒 E-commerce com Microsserviços Orientados a Eventos (Java + Kafka)
 
-Criando uma solução de e-commerce com microsserviços em Java
+## 🚀 Como Executar
 
-DESCRIÇÃO
+### Pré-requisitos
+- Java JDK 11+
+- Docker e Docker Compose
+- Git
 
-Neste projeto prático, foi desenvolvido uma solução de e-commerce, com a arquitetura de microsserviços e aplicado a integração
-entre eles orientada a eventos, com Apache Kafka e garantindo a compatibilidade entre há comunicação dos microsserviços com 
-Schema Registry. Para isso, foi utilizado o Java utilizando a stack do Spring (Spring Boot, Spring Cloud Streams).
+### Passos de Inicialização
+1. **Clonar o repositório:**
+   ```bash
+   git clone https://github.com
+   cd e-commerce
+   ```
+2. **Subir a infraestrutura com Docker Compose:**
+   ```bash
+   cd docker
+   docker-compose up -d
+   cd ..
+   ```
+3. **Executar a Checkout API:**
+   - Linux/macOS: `./gradlew bootRun`
+   - Windows: `gradlew.bat bootRun`
+4. **Executar a Payment API** (em outro terminal):
+   ```bash
+   cd ecommerce-payment-api
+   ./gradlew bootRun
+   ```
+
+## 👨‍💻 Autor
+Desenvolvido por **[marceloxm](https://github.com/marceloxm)**.
+
